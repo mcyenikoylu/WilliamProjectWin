@@ -1,6 +1,6 @@
 ﻿namespace WilliamProjectWin
 {
-    partial class EandMcodes
+    partial class EandMcodesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EandMcodes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EandMcodesForm));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.sEandMcodesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colValue = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sEandMcodesResultBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -54,10 +47,9 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3});
+            this.barButtonItem2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 4;
+            this.ribbon.MaxItemId = 3;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -67,7 +59,7 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Add";
+            this.barButtonItem1.Caption = "Save and Close";
             this.barButtonItem1.Id = 1;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
@@ -76,21 +68,12 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Edit";
+            this.barButtonItem2.Caption = "Cancel";
             this.barButtonItem2.Id = 2;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Delete";
-            this.barButtonItem3.Id = 3;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -103,77 +86,49 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 217);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(442, 31);
             // 
-            // gridControl1
+            // textEdit1
             // 
-            this.gridControl1.DataSource = this.sEandMcodesResultBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 143);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbon;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(442, 275);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.textEdit1.Location = new System.Drawing.Point(62, 167);
+            this.textEdit1.MenuManager = this.ribbon;
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(244, 20);
+            this.textEdit1.TabIndex = 2;
             // 
-            // gridView1
+            // labelControl1
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colID,
-            this.colValue});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
+            this.labelControl1.Location = new System.Drawing.Point(29, 170);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(27, 13);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Name";
             // 
-            // sEandMcodesResultBindingSource
-            // 
-            this.sEandMcodesResultBindingSource.DataSource = typeof(WilliamProjectWin.S_EandMcodes_Result);
-            // 
-            // colID
-            // 
-            this.colID.FieldName = "ID";
-            this.colID.Name = "colID";
-            this.colID.Visible = true;
-            this.colID.VisibleIndex = 0;
-            this.colID.Width = 30;
-            // 
-            // colValue
-            // 
-            this.colValue.FieldName = "Value";
-            this.colValue.Name = "colValue";
-            this.colValue.Visible = true;
-            this.colValue.VisibleIndex = 1;
-            this.colValue.Width = 394;
-            // 
-            // EandMcodes
+            // EandMcodesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 449);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(442, 248);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
-            this.Name = "EandMcodes";
+            this.Name = "EandMcodesForm";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "EandMcodes";
-            this.Load += new System.EventHandler(this.EandMcodes_Load);
+            this.Text = "EandMcodesForm";
+            this.Load += new System.EventHandler(this.EandMcodesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sEandMcodesResultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,13 +140,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private System.Windows.Forms.BindingSource sEandMcodesResultBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colID;
-        private DevExpress.XtraGrid.Columns.GridColumn colValue;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

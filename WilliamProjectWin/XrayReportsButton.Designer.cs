@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XrayReportsButton));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBtnAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -37,9 +38,13 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.sXrayReportsButtonResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sXrayReportsButtonResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +116,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.sXrayReportsButtonResultBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 143);
             this.gridControl1.MainView = this.gridView1;
@@ -121,10 +127,35 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // sXrayReportsButtonResultBindingSource
+            // 
+            this.sXrayReportsButtonResultBindingSource.DataSource = typeof(WilliamProjectWin.S_XrayReportsButton_Result);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID,
+            this.colName});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colID
+            // 
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
+            this.colID.Width = 30;
+            // 
+            // colName
+            // 
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 1;
+            this.colName.Width = 394;
             // 
             // XrayReportsButton
             // 
@@ -136,11 +167,13 @@
             this.Controls.Add(this.ribbon);
             this.Name = "XrayReportsButton";
             this.Ribbon = this.ribbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "XrayReportsButton";
             this.Load += new System.EventHandler(this.XrayReportsButton_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sXrayReportsButtonResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,5 +191,8 @@
         private DevExpress.XtraBars.BarButtonItem barBtnDelete;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource sXrayReportsButtonResultBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
     }
 }

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WilliamAppDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="IU_EandMcodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="Del" Type="int" Mode="In" />
+        </Function>
+        <Function Name="IU_XrayReportsButton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Del" Type="int" Mode="In" />
+        </Function>
+        <Function Name="S_EandMcodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="S_XrayReportsButton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="WilliamAppDBModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WilliamAppDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WilliamAppDBEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="S_XrayReportsButton" ReturnType="Collection(WilliamAppDBModel.S_XrayReportsButton_Result)" />
+          <FunctionImport Name="S_EandMcodes" ReturnType="Collection(WilliamAppDBModel.S_EandMcodes_Result)" />
+          <FunctionImport Name="IU_EandMcodes" ReturnType="Collection(WilliamAppDBModel.IU_EandMcodes_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="Del" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="IU_XrayReportsButton" ReturnType="Collection(Int32)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Del" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="S_XrayReportsButton_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ControlName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="S_EandMcodes_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Value" Nullable="true" MaxLength="250" />
+        </ComplexType>
+        <ComplexType Name="IU_EandMcodes_Result">
+          <Property Type="Int32" Name="ID" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WilliamAppDBModelStoreContainer" CdmEntityContainer="WilliamAppDBEntities" >
+          <FunctionImportMapping FunctionImportName="S_XrayReportsButton" FunctionName="WilliamAppDBModel.Store.S_XrayReportsButton">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WilliamAppDBModel.S_XrayReportsButton_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="S_EandMcodes" FunctionName="WilliamAppDBModel.Store.S_EandMcodes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WilliamAppDBModel.S_EandMcodes_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="IU_EandMcodes" FunctionName="WilliamAppDBModel.Store.IU_EandMcodes" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WilliamAppDBModel.IU_EandMcodes_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="IU_XrayReportsButton" FunctionName="WilliamAppDBModel.Store.IU_XrayReportsButton" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

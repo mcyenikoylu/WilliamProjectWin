@@ -38,9 +38,16 @@
             this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barBtnEandMcodes = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnXrayReportsButton = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
@@ -52,15 +59,12 @@
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.orthoNeuroExam1 = new WilliamProjectWin.OrthoNeuroExam();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barBtnEandMcodes = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnXrayReportsButton = new DevExpress.XtraBars.BarButtonItem();
+            this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -71,8 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             this.customersNavigationPage.SuspendLayout();
+            this.xtraScrollableControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -87,9 +93,11 @@
             this.barStaticItem1,
             this.barStaticItem2,
             this.barBtnEandMcodes,
-            this.barBtnXrayReportsButton});
+            this.barBtnXrayReportsButton,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 51;
+            this.ribbonControl.MaxItemId = 53;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -143,6 +151,39 @@
             this.barStaticItem2.Id = 47;
             this.barStaticItem2.Name = "barStaticItem2";
             // 
+            // barBtnEandMcodes
+            // 
+            this.barBtnEandMcodes.Caption = "E and M codes";
+            this.barBtnEandMcodes.Id = 49;
+            this.barBtnEandMcodes.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnEandMcodes.ImageOptions.Image")));
+            this.barBtnEandMcodes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnEandMcodes.ImageOptions.LargeImage")));
+            this.barBtnEandMcodes.Name = "barBtnEandMcodes";
+            this.barBtnEandMcodes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnEandMcodes_ItemClick);
+            // 
+            // barBtnXrayReportsButton
+            // 
+            this.barBtnXrayReportsButton.Caption = "X-Ray Reports Button";
+            this.barBtnXrayReportsButton.Id = 50;
+            this.barBtnXrayReportsButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnXrayReportsButton.ImageOptions.Image")));
+            this.barBtnXrayReportsButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnXrayReportsButton.ImageOptions.LargeImage")));
+            this.barBtnXrayReportsButton.Name = "barBtnXrayReportsButton";
+            this.barBtnXrayReportsButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnXrayReportsButton_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 51;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Update Data";
+            this.barButtonItem2.Id = 52;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -165,6 +206,27 @@
             this.ribbonPageGroup.Name = "ribbonPageGroup";
             this.ribbonPageGroup.ShowCaptionButton = false;
             this.ribbonPageGroup.Text = "Appearance";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup3});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Administrator";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnEandMcodes);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnXrayReportsButton);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Menu";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Database";
             // 
             // ribbonStatusBar
             // 
@@ -269,26 +331,19 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.employeesLabelControl);
+            this.xtraTabPage1.Controls.Add(this.xtraScrollableControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(619, 351);
             this.xtraTabPage1.Text = "tabTakenOrdered";
             // 
-            // employeesLabelControl
+            // panelControl3
             // 
-            this.employeesLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.employeesLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.employeesLabelControl.Appearance.Options.UseFont = true;
-            this.employeesLabelControl.Appearance.Options.UseForeColor = true;
-            this.employeesLabelControl.Appearance.Options.UseTextOptions = true;
-            this.employeesLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.employeesLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.employeesLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.employeesLabelControl.Location = new System.Drawing.Point(3, 24);
-            this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(329, 136);
-            this.employeesLabelControl.TabIndex = 0;
-            this.employeesLabelControl.Text = "tabTakenOrdered";
+            this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl3.Location = new System.Drawing.Point(0, 0);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(237, 351);
+            this.panelControl3.TabIndex = 15;
             // 
             // xtraTabPage2
             // 
@@ -327,37 +382,14 @@
             this.orthoNeuroExam1.Size = new System.Drawing.Size(625, 379);
             this.orthoNeuroExam1.TabIndex = 0;
             // 
-            // ribbonPage1
+            // xtraScrollableControl1
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Administrator";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnEandMcodes);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnXrayReportsButton);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Menu";
-            // 
-            // barBtnEandMcodes
-            // 
-            this.barBtnEandMcodes.Caption = "E and M codes";
-            this.barBtnEandMcodes.Id = 49;
-            this.barBtnEandMcodes.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barBtnEandMcodes.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barBtnEandMcodes.Name = "barBtnEandMcodes";
-            this.barBtnEandMcodes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnEandMcodes_ItemClick);
-            // 
-            // barBtnXrayReportsButton
-            // 
-            this.barBtnXrayReportsButton.Caption = "X-Ray Reports Button";
-            this.barBtnXrayReportsButton.Id = 50;
-            this.barBtnXrayReportsButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barBtnXrayReportsButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barBtnXrayReportsButton.Name = "barBtnXrayReportsButton";
-            this.barBtnXrayReportsButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnXrayReportsButton_ItemClick);
+            this.xtraScrollableControl1.Controls.Add(this.panelControl3);
+            this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraScrollableControl1.Name = "xtraScrollableControl1";
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(619, 351);
+            this.xtraScrollableControl1.TabIndex = 16;
             // 
             // Form1
             // 
@@ -385,8 +417,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.customersNavigationPage.ResumeLayout(false);
+            this.xtraScrollableControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,7 +441,6 @@
         private DevExpress.XtraNavBar.NavBarGroup employeesNavBarGroup;
         private DevExpress.XtraNavBar.NavBarGroup customersNavBarGroup;
         private DevExpress.XtraBars.Navigation.NavigationPage employeesNavigationPage;
-        private DevExpress.XtraEditors.LabelControl employeesLabelControl;
         private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
         private DevExpress.XtraBars.BarButtonItem employeesBarButtonItem;
         private DevExpress.XtraBars.BarButtonItem customersBarButtonItem;
@@ -424,5 +457,10 @@
         private DevExpress.XtraBars.BarButtonItem barBtnXrayReportsButton;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
     }
 }
